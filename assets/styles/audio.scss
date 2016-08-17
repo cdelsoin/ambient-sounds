@@ -1,7 +1,13 @@
+$pure-blue: #00f;
+
 audio {
   // display: none;
 }
 
 input {
   width: 50%;
+}
+
+h3:hover {
+  color: $pure-blue;
 }
