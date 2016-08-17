@@ -1,11 +1,25 @@
 'use strict';
 
 const pauseAll = function pauseAll(){
-  $('.audio-track').prop('volume', 0);
+  $('#rain-track').get(0).pause();
+  $('#fire-track').get(0).pause();
+  $('#thunder-track').get(0).pause();
+  $('#nature-track').get(0).pause();
+  $('#birds-track').get(0).pause();
+  $('#coffee-track').get(0).pause();
+  $('#waves-track').get(0).pause();
+  $('#bowl-track').get(0).pause();
 };
 
 const playAll = function playAll(){
-  $('.audio-track').prop('volume', 0.5);
+  $('#rain-track').get(0).play();
+  $('#fire-track').get(0).play();
+  $('#thunder-track').get(0).play();
+  $('#nature-track').get(0).play();
+  $('#birds-track').get(0).play();
+  $('#coffee-track').get(0).play();
+  $('#waves-track').get(0).play();
+  $('#bowl-track').get(0).play();
 };
 
 //THIS ADJUSTS ONLY ONE SLIDER -- CODE NOT DRY
@@ -25,13 +39,6 @@ const playAll = function playAll(){
 //
 // };
 
-const changeRainVol = function changeRainVol(){
-  const sliderInput = function sliderInput(){
-    return $('.rainSlider').val();
-  };
-  $('#rain-track').prop('volume', sliderInput);
-};
-
 
 // string interpralation to select specific slider
 // const changeRainVol = function changeRainVol(){
@@ -41,6 +48,13 @@ const changeRainVol = function changeRainVol(){
 //   };
 //   $('#rain-track').prop('volume', sliderInput);
 // };
+
+const changeRainVol = function changeRainVol(){
+  const sliderInput = function sliderInput(){
+    return $('.rainSlider').val();
+  };
+  $('#rain-track').prop('volume', sliderInput);
+};
 
 const changeFireVol = function changeFireVol(){
   const sliderInput = function sliderInput(){
