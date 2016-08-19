@@ -12,6 +12,44 @@
       <h3 id="pause">Pause</h3>
       <h3 id="play">Play</h3>
 
+<!-- USER LOGIN STUFF -->
+      <form class="sign-up-form">
+        <legend>Sign Up</legend>
+        <input type="text" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+        <input class="sign-up-button" type="submit" name="submit" value="Sign Up!">
+      </form>
+
+      <form class="sign-in-form">
+        <legend>Sign In</legend>
+        <input type="email" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input class="sign-in-button" type="submit" name="submit" value="Sign In!">
+      </form>
+
+      <form class="change-password-form">
+        <legend>Change Password</legend>
+        <input type="password" name="passwords[old]" placeholder="old password">
+        <input type="password" name="passwords[new]" placeholder="new password">
+        <input class="change-password-button" type="submit"  name="submit" value="Change password!">
+      </form>
+
+      <form class="sign-out-form">
+        <legend>Sign Out</legend>
+        <input class="sign-out-button" type="submit" name="submit" value="Sign Out!">
+      </form>
+<!-- END USER LOGIN STUFF -->
+
+<!-- PRESETS AJAX -->
+      <legend>Preset Ajax</legend>
+      <h3 class="get">Get Presets</h3>
+      <h3 class="save">Save</h3>
+      <h3 class="load">Load</h3>
+<!-- END PRESETS AJAX -->
+
+<!-- AUDIO TRACKS AND SLIDERS  -->
+      <legend>Audio Tracks </legend>
       <form class="track-one">
         <p>Rain</p>
         <audio id="rain-track" class="audio-track" autoplay="autoplay" loop="loop" controls>
@@ -41,11 +79,11 @@
 
       <form class="track-four">
         <p>Nature at Night/Crickets</p>
-        <audio id="nature-track" class="audio-track" autoplay="autoplay" loop="loop" controls>
-          <source src="assets/audio/nature.ogg" type="audio/ogg">
-          <source src="assets/audio/nature.mp3" type="audio/mp3">
+        <audio id="crickets-track" class="audio-track" autoplay="autoplay" loop="loop" controls>
+          <source src="assets/audio/crickets.ogg" type="audio/ogg">
+          <source src="assets/audio/crickets.mp3" type="audio/mp3">
         </audio>
-        <input class="natureSlider allSliders" data-track="nature" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.5">
       </form>
 
       <form class="track-five">
@@ -83,8 +121,10 @@
         </audio>
         <input class="bowlSlider allSliders" data-track="bowl" type="range" min="0" max="1" step="0.025" value="0.5">
       </form>
+<!-- END AUDIO TRACKS AND SLIDERS  -->
 
       <p>memo: remember to use the same method used to patch tic-tac-toe cells. track-data.volume[i] = databaseArray[i]</p>
+      <p>master volume - have master change all volumes. place if statement into individual sliderVol functions. if slider.val > than master.val then VOLUME(not slider)= master.val</p>
 
     </body>
 </html>

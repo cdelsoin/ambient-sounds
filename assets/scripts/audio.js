@@ -4,7 +4,7 @@ const pauseAll = function pauseAll(){
   $('#rain-track').get(0).pause();
   $('#fire-track').get(0).pause();
   $('#thunder-track').get(0).pause();
-  $('#nature-track').get(0).pause();
+  $('#crickets-track').get(0).pause();
   $('#birds-track').get(0).pause();
   $('#coffee-track').get(0).pause();
   $('#waves-track').get(0).pause();
@@ -15,7 +15,7 @@ const playAll = function playAll(){
   $('#rain-track').get(0).play();
   $('#fire-track').get(0).play();
   $('#thunder-track').get(0).play();
-  $('#nature-track').get(0).play();
+  $('#crickets-track').get(0).play();
   $('#birds-track').get(0).play();
   $('#coffee-track').get(0).play();
   $('#waves-track').get(0).play();
@@ -70,7 +70,7 @@ const changeThunderVol = function changeThunderVol(){
   $('#thunder-track').prop('volume', sliderInput);
 };
 
-const changeNatureVol = function changeNatureVol(){
+const changeCricketsVol = function changeCricketsVol(){
   const sliderInput = function sliderInput(){
     return $('.natureSlider').val();
   };
@@ -113,7 +113,7 @@ const changeBowlVol = function changeBowlVol(){
 $('.rainSlider').on('change', changeRainVol);
 $('.fireSlider').on('change', changeFireVol);
 $('.thunderSlider').on('change', changeThunderVol);
-$('.natureSlider').on('change', changeNatureVol);
+$('.natureSlider').on('change', changeCricketsVol);
 $('.birdsSlider').on('change', changeBirdsVol);
 $('.coffeeSlider').on('change', changeCoffeeVol);
 $('.wavesSlider').on('change', changeWavesVol);
