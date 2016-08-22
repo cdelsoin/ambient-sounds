@@ -39,9 +39,21 @@ const signOut = () => {
   });
 };
 
+
+// GETS ALL PRESETS (NON USER SPECIFIC)
+// const getPresets = function (){
+//   return $.ajax({
+//     url: app.api + '/presets/',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + app.user.token
+//     },
+//   });
+// };
+
 const getPresets = function (){
   return $.ajax({
-    url: app.api + '/presets/',
+    url: app.api + '/presets?user_presets=true',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -50,9 +62,9 @@ const getPresets = function (){
 };
 
 
+
 // const savePreset = (getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) => $.ajax ({
 const savePreset = function (getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl){
-  // debugger;
   return $.ajax ({
     url: app.api + '/presets/',
     method: 'POST',

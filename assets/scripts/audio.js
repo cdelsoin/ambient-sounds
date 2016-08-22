@@ -110,14 +110,14 @@ const changeBowlVol = function changeBowlVol(){
 
 // $('.rainSlider').on('change', changeVol);
 // $('.allSliders').on('change', changeVol2);
-$('.rainSlider').on('change', changeRainVol);
-$('.fireSlider').on('change', changeFireVol);
-$('.thunderSlider').on('change', changeThunderVol);
-$('.natureSlider').on('change', changeCricketsVol);
-$('.birdsSlider').on('change', changeBirdsVol);
-$('.coffeeSlider').on('change', changeCoffeeVol);
-$('.wavesSlider').on('change', changeWavesVol);
-$('.bowlSlider').on('change', changeBowlVol);
+$('.rainSlider').on('input change', changeRainVol);
+$('.fireSlider').on('input change', changeFireVol);
+$('.thunderSlider').on('input change', changeThunderVol);
+$('.natureSlider').on('input change', changeCricketsVol);
+$('.birdsSlider').on('input change', changeBirdsVol);
+$('.coffeeSlider').on('input change', changeCoffeeVol);
+$('.wavesSlider').on('input change', changeWavesVol);
+$('.bowlSlider').on('input change', changeBowlVol);
 $('#pause').on('click', pauseAll);
 $('#play').on('click', playAll);
 $('.audio-track').prop('volume', 0.5);
