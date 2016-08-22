@@ -50,7 +50,10 @@ const getPresets = function (){
 };
 
 
-const savePreset = (getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) => $.ajax ({
+// const savePreset = (getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) => $.ajax ({
+const savePreset = function (getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl){
+  // debugger;
+  return $.ajax ({
     url: app.api + '/presets/',
     method: 'POST',
     headers: {
@@ -69,7 +72,8 @@ const savePreset = (getName, getRain, getFire, getThunder, getCrickets, getBirds
         "bowl": getBowl
       }
     }
-});
+  });
+};
 
 module.exports = {
   signUp,

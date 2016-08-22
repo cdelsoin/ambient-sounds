@@ -81,7 +81,7 @@ const onGetPresets = function onGetPresets(event) {
 // };
 
 
-const onSavePreset = function onSavePreset(getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) {
+const onSavePreset = function onSavePreset(getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) {
   getRain = $(".rainSlider").prop('value');
   getFire = $(".fireSlider").prop('value');
   getThunder = $(".thunderSlider").prop('value');
@@ -90,10 +90,12 @@ const onSavePreset = function onSavePreset(getName, getRain, getFire, getThunder
   getCoffee = $(".coffeeSlider").prop('value');
   getWaves  = $(".wavesSlider").prop('value');
   getBowl = $(".bowlSlider").prop('value');
+  // let getName = getFormFields(this);
+  let getName = $('.save-input').prop('value');
+  event.preventDefault();
   api.savePreset(getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl)
     .done(ui.success)
     .fail(ui.failure);
-    debugger;
 };
 
 // END SAVE PRESETS
