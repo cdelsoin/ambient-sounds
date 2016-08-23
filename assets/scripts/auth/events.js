@@ -50,37 +50,6 @@ const onGetPresets = function onGetPresets(event) {
     .fail(ui.failure);
 };
 
-
-// SAVE PRESETS
-
-
-// const getName,
-// const getRain = function getRain(){
-//    return $(".rainSlider").prop('value');
-// };
-// const getFire = function getRain(){
-//    return $(".rainSlider").prop('value')
-// ;};
-// const getThunder = function getRain(){
-//   return $(".rainSlider").prop('value');
-// };
-// const getCrickets = function getRain(){
-//   return $(".rainSlider").prop('value');
-// };
-// const getBirds = function getRain(){
-//   return $(".rainSlider").prop('value');
-// };
-// const getCoffee = function getRain(){
-//   return $(".rainSlider").prop('value');
-// };
-// const getWaves  = function getRain(){
-//   return $(".rainSlider").prop('value');
-// };
-// const getBowl = function getRain(){
-//   return $(".rainSlider").prop('value');
-// };
-
-
 const onSavePreset = function onSavePreset(getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) {
   getRain = $(".rainSlider").prop('value');
   getFire = $(".fireSlider").prop('value');
@@ -98,10 +67,35 @@ const onSavePreset = function onSavePreset(getRain, getFire, getThunder, getCric
     .fail(ui.failure);
 };
 
-// END SAVE PRESETS
+const onLoadPreset = function onLoadPreset(data) {
+  console.log(data);
+  event.preventDefault();
+  api.loadPreset(data)
+    .done(ui.loadPresetSuccess)
+    .fail(ui.failure);
+};
 
+const onDeletePreset = function onDeletePreset() {
+  let data = $('.delete-input').prop('value');
+  console.log(data);
+  event.preventDefault();
+  api.deletePreset(data)
+    .done(ui.success)
+    .fail(ui.failure);
+};
+
+const onChangePresetName = function changePresetName() {
+  let newName = $('.update-input').prop('value');
+  let id = $('.update').prop('id');
+  api.changePresetName(id, newName)
+    .done(ui.success)
+    .fail(ui.failure);
+};
 
 const addHandlers = () => {
+  // $('.load').on('submit', onLoadPreset);
+
+  $('.delete').on('click', onDeletePreset);
   $('.get').on('click', onGetPresets);
   $('.save').on('click', onSavePreset);
   $('.sign-up-form').on('submit', onSignUp);
@@ -112,4 +106,6 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
+  onLoadPreset,
+  onChangePresetName,
 };

@@ -87,6 +87,43 @@ const savePreset = function (getName, getRain, getFire, getThunder, getCrickets,
   });
 };
 
+const loadPreset = function (data){
+  return $.ajax ({
+    url: app.api + '/presets/' + data,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+  });
+};
+
+const deletePreset = function (data){
+  return $.ajax ({
+    url: app.api + '/presets/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+  });
+};
+
+const changePresetName = function (id, newName){
+  return $.ajax ({
+    url: app.api + '/presets/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      "preset": {
+        "name": newName
+      }
+    }
+  });
+};
+
+
+
 module.exports = {
   signUp,
   signIn,
@@ -94,4 +131,7 @@ module.exports = {
   signOut,
   getPresets,
   savePreset,
+  loadPreset,
+  deletePreset,
+  changePresetName,
 };

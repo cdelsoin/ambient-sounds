@@ -72,9 +72,9 @@ const changeThunderVol = function changeThunderVol(){
 
 const changeCricketsVol = function changeCricketsVol(){
   const sliderInput = function sliderInput(){
-    return $('.natureSlider').val();
+    return $('.cricketsSlider').val();
   };
-  $('#nature-track').prop('volume', sliderInput);
+  $('#crickets-track').prop('volume', sliderInput);
 };
 
 const changeBirdsVol = function changeBirdsVol(){
@@ -113,7 +113,7 @@ const changeBowlVol = function changeBowlVol(){
 $('.rainSlider').on('input change', changeRainVol);
 $('.fireSlider').on('input change', changeFireVol);
 $('.thunderSlider').on('input change', changeThunderVol);
-$('.natureSlider').on('input change', changeCricketsVol);
+$('.cricketsSlider').on('input change', changeCricketsVol);
 $('.birdsSlider').on('input change', changeBirdsVol);
 $('.coffeeSlider').on('input change', changeCoffeeVol);
 $('.wavesSlider').on('input change', changeWavesVol);
