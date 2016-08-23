@@ -1,6 +1,9 @@
 'use strict';
 
 const pauseAll = function pauseAll(){
+  $('.pause-img').hide();
+  $('.play-img').show();
+
   $('#rain-track').get(0).pause();
   $('#fire-track').get(0).pause();
   $('#thunder-track').get(0).pause();
@@ -12,6 +15,9 @@ const pauseAll = function pauseAll(){
 };
 
 const playAll = function playAll(){
+  $('.play-img').hide();
+  $('.pause-img').show();
+
   $('#rain-track').get(0).play();
   $('#fire-track').get(0).play();
   $('#thunder-track').get(0).play();
@@ -105,6 +111,17 @@ const changeBowlVol = function changeBowlVol(){
   $('#bowl-track').prop('volume', sliderInput);
 };
 
+// const onPlayClick = function(){
+//   let clicks = 0;
+//
+//   if (clicks % 2 === 0) {
+//     $('.play-button').add('x');
+//     clicks++;
+//   } else {
+//     $(this).text('o');
+//     clicks++;
+//   }
+// };
 
 
 
@@ -120,4 +137,4 @@ $('.wavesSlider').on('input change', changeWavesVol);
 $('.bowlSlider').on('input change', changeBowlVol);
 $('#pause').on('click', pauseAll);
 $('#play').on('click', playAll);
-$('.audio-track').prop('volume', 0.5);
+// $('.audio-track').prop('volume', 0.5);

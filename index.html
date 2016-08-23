@@ -5,15 +5,41 @@
 
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body class="container-fluid">
 
-      <h1>Ambient Sounds</h1>
+
+      <header>
+        <p class="banner">Good Ambient Sound Mixer Name</p>
+      </header>
+
+      <div class="sidebar">
+        <div class="play-button">
+          <img src="assets/images/play-button-b.png" id="play" class="play-img" alt="" />
+          <img src="assets/images/pause-button-b.png" id="pause" class="pause-img" alt="" />
+        </div>
+        <div class="user-ajax">
+          <h3>Sign Up</h3>
+          <h3>Sign In</h3>
+          <h3>Change Password</h3>
+          <h3>Sign Out</h3>
+        </div>
+        <div class="preset-ajax">
+          <h3>Save Preset</h3>
+          <h3>Delete Preset By ID</h3>
+          <h3>View Presets</h3>
+        </div>
+      </div>
+
+      <!-- <h1>Ambient Sounds</h1>
       <h3 id="pause">Pause</h3>
-      <h3 id="play">Play</h3>
+      <h3 id="play">Play</h3> -->
 
 <!-- USER LOGIN STUFF -->
-      <form class="sign-up-form">
+
+
+      <!-- <form class="sign-up-form">
         <legend>Sign Up</legend>
         <input type="text" name="credentials[email]" placeholder="username">
         <input type="password" name="credentials[password]" placeholder="password">
@@ -38,11 +64,13 @@
       <form class="sign-out-form">
         <legend>Sign Out</legend>
         <input class="sign-out-button" type="submit" name="submit" value="Sign Out!">
-      </form>
+      </form> -->
 <!-- END USER LOGIN STUFF -->
 
 <!-- PRESETS AJAX -->
-      <legend>Preset Ajax</legend>
+
+
+      <!-- <legend>Preset Ajax</legend>
       <form>
         <h3 class="save">Save</h3>
         <input class="save-input" type="text" placeholder="name your preset">
@@ -56,90 +84,92 @@
         <h3 class="delete-header">Delete Preset by ID</h3>
         <input class="delete-input" type="text" placeholder="enter preset ID to delete">
         <input class="delete" type="submit" value="Delete Preset">
-      </form>
+      </form> -->
 <!-- END PRESETS AJAX -->
 
 <!-- AUDIO TRACKS AND SLIDERS  -->
-      <legend>Audio Tracks </legend>
-      <form class="track-one">
-        <p>Rain</p>
-        <img src="assets/images/rain-b.png" alt="" />
-        <audio id="rain-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/rain.ogg" type="audio/ogg">
-          <source src="assets/audio/rain.mp3" type="audio/mp3">
-        </audio>
-        <input class="rainSlider allSliders" data-track="rain" type="range" min="0" max="1" step="0.025" value="0.0">
-      </form>
+      <div class="audio-div">
+        <!-- <legend>Audio Tracks </legend> -->
+        <form class="track-one">
+          <img src="assets/images/rain-b.png" alt="" />
+          <p>Rain</p>
+          <audio id="rain-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/rain.ogg" type="audio/ogg">
+            <source src="assets/audio/rain.mp3" type="audio/mp3">
+          </audio>
+          <input class="rainSlider allSliders" data-track="rain" type="range" min="0" max="1" step="0.025" value="0.0">
+        </form>
 
-      <form class="track-two">
-        <p>Fireplace</p>
-        <img src="assets/images/fire-b.png" alt="" />
-        <audio id="fire-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/fireplace.ogg" type="audio/ogg">
-          <source src="assets/audio/fireplace.mp3" type="audio/mp3">
-        </audio>
-        <input class="fireSlider allSliders" data-track="fire" type="range" min="0" max="1" step="0.025" value="0.775">
-      </form>
+        <form class="track-two">
+          <img src="assets/images/fire-b.png" alt="" />
+          <p>Fireplace</p>
+          <audio id="fire-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/fireplace.ogg" type="audio/ogg">
+            <source src="assets/audio/fireplace.mp3" type="audio/mp3">
+          </audio>
+          <input class="fireSlider allSliders" data-track="fire" type="range" min="0" max="1" step="0.025" value="0.775">
+        </form>
 
-      <form class="track-three">
-        <p>Thunderstorm</p>
-        <img src="assets/images/thunder-b.png" alt="" />
-        <audio id="thunder-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/thunder.ogg" type="audio/ogg">
-          <source src="assets/audio/thunder.mp3" type="audio/mp3">
-        </audio>
-        <input class="thunderSlider allSliders" data-track="thunder" type="range" min="0" max="1" step="0.025" value="0.0">
-      </form>
+        <form class="track-three">
+          <img src="assets/images/thunder-b.png" alt="" />
+          <p>Thunderstorm</p>
+          <audio id="thunder-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/thunder.ogg" type="audio/ogg">
+            <source src="assets/audio/thunder.mp3" type="audio/mp3">
+          </audio>
+          <input class="thunderSlider allSliders" data-track="thunder" type="range" min="0" max="1" step="0.025" value="0.0">
+        </form>
 
-      <form class="track-four">
-        <p>Nature at Night/Crickets</p>
-        <img src="assets/images/crickets-b.png" alt="" />
-        <audio id="crickets-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/crickets.ogg" type="audio/ogg">
-          <source src="assets/audio/crickets.mp3" type="audio/mp3">
-        </audio>
-        <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.675">
-      </form>
+        <form class="track-four">
+          <img src="assets/images/crickets-b.png" alt="" />
+          <p>Nature at Night/Crickets</p>
+          <audio id="crickets-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/crickets.ogg" type="audio/ogg">
+            <source src="assets/audio/crickets.mp3" type="audio/mp3">
+          </audio>
+          <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.675">
+        </form>
 
-      <form class="track-five">
-        <p>Birds</p>
-        <img src="assets/images/birds-b.png" alt="" />
-        <audio id="birds-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/birds.ogg" type="audio/ogg">
-          <source src="assets/audio/birds.mp3" type="audio/mp3">
-        </audio>
-        <input class="birdsSlider allSliders" data-track="birds" type="range" min="0" max="1" step="0.025" value="0.5">
-      </form>
+        <form class="track-five">
+          <img src="assets/images/birds-b.png" alt="" />
+          <p>Birds</p>
+          <audio id="birds-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/birds.ogg" type="audio/ogg">
+            <source src="assets/audio/birds.mp3" type="audio/mp3">
+          </audio>
+          <input class="birdsSlider allSliders" data-track="birds" type="range" min="0" max="1" step="0.025" value="0.5">
+        </form>
 
-      <form class="track-six">
-        <p>Coffee Shop</p>
-        <img src="assets/images/coffee-b.png" alt="" />
-        <audio id="coffee-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/coffee.ogg" type="audio/ogg">
-          <source src="assets/audio/coffee.mp3" type="audio/mp3">
-        </audio>
-        <input class="coffeeSlider allSliders" data-track="coffee" type="range" min="0" max="1" step="0.025" value="0.0">
-      </form>
+        <form class="track-six">
+          <img src="assets/images/coffee-b.png" alt="" />
+          <p>Coffee Shop</p>
+          <audio id="coffee-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/coffee.ogg" type="audio/ogg">
+            <source src="assets/audio/coffee.mp3" type="audio/mp3">
+          </audio>
+          <input class="coffeeSlider allSliders" data-track="coffee" type="range" min="0" max="1" step="0.025" value="0.0">
+        </form>
 
-      <form class="track-seven">
-        <p>Waves</p>
-        <img src="assets/images/waves-b.png" alt="" />
-        <audio id="waves-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/waves.ogg" type="audio/ogg">
-          <source src="assets/audio/waves.mp3" type="audio/mp3">
-        </audio>
-        <input class="wavesSlider allSliders" data-track="waves" type="range" min="0" max="1" step="0.025" value="0.0">
-      </form>
+        <form class="track-seven">
+          <img src="assets/images/waves-b.png" alt="" />
+          <p>Waves</p>
+          <audio id="waves-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/waves.ogg" type="audio/ogg">
+            <source src="assets/audio/waves.mp3" type="audio/mp3">
+          </audio>
+          <input class="wavesSlider allSliders" data-track="waves" type="range" min="0" max="1" step="0.025" value="0.0">
+        </form>
 
-      <form class="track-eight">
-        <p>Tibetan Singing Bowl</p>
-        <img src="assets/images/bowl-b.png" alt="" />
-        <audio id="bowl-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
-          <source src="assets/audio/bowl.ogg" type="audio/ogg">
-          <source src="assets/audio/bowl.mp3" type="audio/mp3">
-        </audio>
-        <input class="bowlSlider allSliders" data-track="bowl" type="range" min="0" max="1" step="0.025" value="0.0">
-      </form>
+        <form class="track-eight">
+          <img src="assets/images/bowl-b.png" alt="" />
+          <p>Tibetan Singing Bowl</p>
+          <audio id="bowl-track" class="audio-track" loop="loop" controls>
+            <source src="assets/audio/bowl.ogg" type="audio/ogg">
+            <source src="assets/audio/bowl.mp3" type="audio/mp3">
+          </audio>
+          <input class="bowlSlider allSliders" data-track="bowl" type="range" min="0" max="1" step="0.025" value="0.0">
+        </form>
+      </div>
 <!-- END AUDIO TRACKS AND SLIDERS  -->
 
     </body>

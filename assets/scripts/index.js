@@ -40,5 +40,7 @@ const campfirePreset = function(){
 // On document ready
 $(() => {
   authEvents.addHandlers();
+  $('.pause-img').hide();
   campfirePreset();
+
 });

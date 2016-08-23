@@ -1,12 +1,63 @@
 $pure-blue: #00f;
 
+body {
+  // background-color: red;
+}
+
 audio {
   display: none;
 }
 
-.allSliders {
-  display: inline;
-  width: 50px;
+input[type=range] {
+  // display: inline;
+  width: 200px;
+  height: 100px;
+}
+
+header {
+  border: 2px solid cyan;
+  overflow: hidden;
+}
+
+.banner {
+  text-align: center;
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+.play-button {
+  text-align: center;
+  padding: 20px 0;
+  border: 2px solid yellow;
+}
+
+.user-ajax {
+  border: 2px solid $pure-blue;
+}
+
+.preset-ajax {
+  border: 2px solid red;
+  overflow: hidden;
+  // height: 500px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 25%;
+  float: right;
+}
+
+.audio-div {
+  border: 2px solid green;
+  height: 100%;
+  width: 75%;
+  float: left;
+}
+
+form {
+  float: left;
+  margin: 3%;
+  text-align: center;
 }
 
 h3:hover {
