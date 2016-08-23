@@ -51,10 +51,9 @@
 
       <h3 class="get">Get Presets (Displays)</h3>
       <div class="presets-container"></div>
-      <h3 class="load">Load (Gets & Applies)</h3>
 
       <form>
-        <h3 class="delete">Delete Preset by ID</h3>
+        <h3 class="delete-header">Delete Preset by ID</h3>
         <input class="delete-input" type="text" placeholder="enter preset ID to delete">
         <input class="delete" type="submit" value="Delete Preset">
       </form>
@@ -64,43 +63,43 @@
       <legend>Audio Tracks </legend>
       <form class="track-one">
         <p>Rain</p>
-        <audio id="rain-track" class="audio-track" loop="loop" controls>
+        <audio id="rain-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/rain.ogg" type="audio/ogg">
           <source src="assets/audio/rain.mp3" type="audio/mp3">
         </audio>
-        <input class="rainSlider allSliders" data-track="rain" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="rainSlider allSliders" data-track="rain" type="range" min="0" max="1" step="0.025" value="0.0">
       </form>
 
       <form class="track-two">
         <p>Fireplace</p>
-        <audio id="fire-track" class="audio-track" loop="loop" controls>
+        <audio id="fire-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/fireplace.ogg" type="audio/ogg">
           <source src="assets/audio/fireplace.mp3" type="audio/mp3">
         </audio>
-        <input class="fireSlider allSliders" data-track="fire" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="fireSlider allSliders" data-track="fire" type="range" min="0" max="1" step="0.025" value="0.775">
       </form>
 
       <form class="track-three">
         <p>Thunderstorm</p>
-        <audio id="thunder-track" class="audio-track" loop="loop" controls>
+        <audio id="thunder-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/thunder.ogg" type="audio/ogg">
           <source src="assets/audio/thunder.mp3" type="audio/mp3">
         </audio>
-        <input class="thunderSlider allSliders" data-track="thunder" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="thunderSlider allSliders" data-track="thunder" type="range" min="0" max="1" step="0.025" value="0.0">
       </form>
 
       <form class="track-four">
         <p>Nature at Night/Crickets</p>
-        <audio id="crickets-track" class="audio-track" loop="loop" controls>
+        <audio id="crickets-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/crickets.ogg" type="audio/ogg">
           <source src="assets/audio/crickets.mp3" type="audio/mp3">
         </audio>
-        <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.675">
       </form>
 
       <form class="track-five">
         <p>Birds</p>
-        <audio id="birds-track" class="audio-track" loop="loop" controls>
+        <audio id="birds-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/birds.ogg" type="audio/ogg">
           <source src="assets/audio/birds.mp3" type="audio/mp3">
         </audio>
@@ -109,34 +108,31 @@
 
       <form class="track-six">
         <p>Coffee Shop</p>
-        <audio id="coffee-track" class="audio-track" loop="loop" controls>
+        <audio id="coffee-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/coffee.ogg" type="audio/ogg">
           <source src="assets/audio/coffee.mp3" type="audio/mp3">
         </audio>
-        <input class="coffeeSlider allSliders" data-track="coffee" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="coffeeSlider allSliders" data-track="coffee" type="range" min="0" max="1" step="0.025" value="0.0">
       </form>
 
       <form class="track-seven">
         <p>Waves</p>
-        <audio id="waves-track" class="audio-track" loop="loop" controls>
+        <audio id="waves-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/waves.ogg" type="audio/ogg">
           <source src="assets/audio/waves.mp3" type="audio/mp3">
         </audio>
-        <input class="wavesSlider allSliders" data-track="waves" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="wavesSlider allSliders" data-track="waves" type="range" min="0" max="1" step="0.025" value="0.0">
       </form>
 
-      <form class="track-seven">
+      <form class="track-eight">
         <p>Tibetan Singing Bowl</p>
-        <audio id="bowl-track" class="audio-track" loop="loop" controls>
+        <audio id="bowl-track" class="audio-track" loop="loop" autoplay="autoplay" controls>
           <source src="assets/audio/bowl.ogg" type="audio/ogg">
           <source src="assets/audio/bowl.mp3" type="audio/mp3">
         </audio>
-        <input class="bowlSlider allSliders" data-track="bowl" type="range" min="0" max="1" step="0.025" value="0.5">
+        <input class="bowlSlider allSliders" data-track="bowl" type="range" min="0" max="1" step="0.025" value="0.0">
       </form>
 <!-- END AUDIO TRACKS AND SLIDERS  -->
-      <!-- <p>remember to add re-autoplay</p>
-      <p>memo: remember to use the same method used to patch tic-tac-toe cells. track-data.volume[i] = databaseArray[i]</p>
-      <p>master volume - have master change all volumes. place if statement into individual sliderVol functions. if slider.val > than master.val then VOLUME(not slider)= master.val</p> -->
 
     </body>
 </html>

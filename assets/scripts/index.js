@@ -17,9 +17,20 @@ $(document).on('click','.update', function(){
   authEvents.onChangePresetName(this.id);
 });
 
+const campfirePreset = function(){
+  $("#rain-track").prop('volume', 0);
+  $("#fire-track").prop('volume', 0.775);
+  $("#thunder-track").prop('volume', 0);
+  $("#crickets-track").prop('volume', 0.675);
+  $("#birds-track").prop('volume', 0.5);
+  $("#coffee-track").prop('volume', 0);
+  $("#waves-track").prop('volume', 0);
+  $("#bowl-track").prop('volume', 0);
+};
 
 
 // On document ready
 $(() => {
   authEvents.addHandlers();
+  campfirePreset();
 });
