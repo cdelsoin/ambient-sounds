@@ -33,15 +33,28 @@ header {
 
 .user-ajax {
   border: 2px solid $pure-blue;
+  overflow: hidden;
+}
+
+.navbar {
+  float: left;
+  width: 25%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid magenta;
 }
 
 .preset-ajax {
   border: 2px solid red;
+  // text-align: center;
+  // float: left;
   overflow: hidden;
   // height: 500px;
 }
 
 .sidebar {
+  text-align: center;
   height: 100%;
   width: 25%;
   float: right;
