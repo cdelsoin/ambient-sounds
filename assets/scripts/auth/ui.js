@@ -50,7 +50,7 @@ const loadPresetSuccess = (data) => {
   $("#bowl-track").prop('volume', preset.bowl);
 };
 
-const changePresetNameSuccess = (data) => {
+const updatePresetSuccess = (data) => {
   const showPresets = require('../templates/presets.handlebars');
   $('.presets-container').html(showPresets({
     presets: data.presets
@@ -64,5 +64,5 @@ module.exports = {
   signOutSuccess,
   getPresetsSuccess,
   loadPresetSuccess,
-  changePresetNameSuccess
+  updatePresetSuccess
 };

@@ -75,8 +75,8 @@ const onLoadPreset = function onLoadPreset(data) {
     .fail(ui.failure);
 };
 
-const onDeletePreset = function onDeletePreset() {
-  let data = $('.delete-input').prop('value');
+const onDeletePreset = function onDeletePreset(data) {
+  // let data = $('.delete-input').prop('value');
   console.log(data);
   event.preventDefault();
   api.deletePreset(data)
@@ -84,10 +84,16 @@ const onDeletePreset = function onDeletePreset() {
     .fail(ui.failure);
 };
 
-const onChangePresetName = function changePresetName() {
-  let newName = $('.update-input').prop('value');
-  let id = $('.update').prop('id');
-  api.changePresetName(id, newName)
+const onUpdatePreset = function onChangePresetName(id, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) {
+  getRain = $(".rainSlider").prop('value');
+  getFire = $(".fireSlider").prop('value');
+  getThunder = $(".thunderSlider").prop('value');
+  getCrickets = $(".cricketsSlider").prop('value');
+  getBirds = $(".birdsSlider").prop('value');
+  getCoffee = $(".coffeeSlider").prop('value');
+  getWaves  = $(".wavesSlider").prop('value');
+  getBowl = $(".bowlSlider").prop('value');
+  api.updatePreset(id, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl)
     .done(ui.success)
     .fail(ui.failure);
 };
@@ -107,5 +113,6 @@ const addHandlers = () => {
 module.exports = {
   addHandlers,
   onLoadPreset,
-  onChangePresetName,
+  onUpdatePreset,
+  onDeletePreset,
 };
