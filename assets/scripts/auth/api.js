@@ -107,7 +107,7 @@ const deletePreset = function (data){
   });
 };
 
-const changePresetName = function (id, newName){
+const updatePreset = function (id, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl){
   return $.ajax ({
     url: app.api + '/presets/' + id,
     method: 'PATCH',
@@ -116,7 +116,14 @@ const changePresetName = function (id, newName){
     },
     data: {
       "preset": {
-        "name": newName
+        "rain": getRain,
+        "fire": getFire,
+        "thunder": getThunder,
+        "crickets": getCrickets,
+        "birds": getBirds,
+        "coffee": getCoffee,
+        "waves": getWaves,
+        "bowl": getBowl
       }
     }
   });
@@ -133,5 +140,5 @@ module.exports = {
   savePreset,
   loadPreset,
   deletePreset,
-  changePresetName,
+  updatePreset,
 };
