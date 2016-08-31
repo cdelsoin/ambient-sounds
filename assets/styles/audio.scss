@@ -2,6 +2,12 @@ $pure-blue: #00f;
 
 body {
   // background-color: red;
+  background-image: url('http://i.imgur.com/gmuhE5e.gif');
+  // background-image: url('../images/waves-gif.gif');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  min-height: 100vh;
 }
 
 audio {
@@ -15,7 +21,7 @@ input[type=range] {
 }
 
 header {
-  border: 2px solid cyan;
+  // border: 2px solid cyan;
   overflow: hidden;
 }
 
@@ -26,27 +32,28 @@ header {
 }
 
 .play-button {
+  // border: 2px solid yellow;
   text-align: center;
   padding: 20px 0;
-  border: 2px solid yellow;
 }
 
 .user-ajax {
-  border: 2px solid $pure-blue;
+  // border: 2px solid $pure-blue;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .navbar {
+  // border: 2px solid magenta;
   float: left;
   width: 25%;
   height: 100%;
   margin: 0 auto;
   text-align: center;
-  border: 2px solid magenta;
 }
 
 .preset-ajax {
-  border: 2px solid red;
+  // border: 2px solid red;
   // text-align: center;
   // float: left;
   overflow: hidden;
@@ -61,7 +68,7 @@ header {
 }
 
 .audio-div {
-  border: 2px solid green;
+  // border: 2px solid green;
   height: 100%;
   width: 75%;
   float: left;
