@@ -12,7 +12,7 @@ const ui = require('./ui');
 // });
 
 
-const onSignIn = function (event) {
+const onSignIn = function () {
   event.preventDefault();
   let data = getFormFields(this);
   api.signIn(data)
@@ -24,7 +24,11 @@ const onSignUp = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
   api.signUp(data)
-  // .then(onSignIn)
+  .then(
+    api.signIn(data)
+    .done(ui.signInSuccess)
+    .fail(ui.failure)
+  )
   .done(ui.signUpSuccess)
   .fail(ui.failure);
 };

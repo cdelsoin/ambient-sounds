@@ -26,6 +26,14 @@ const signInSuccess = (data) => {
 
 const signUpSuccess = (data) => {
   $('#sign-up-modal').modal('hide');
+
+  $('.sign-up-div').hide();
+  $('.sign-in-div').hide();
+  $('.save-div').show();
+  $('.get-div').show();
+  $('.change-pass-div').show();
+  $('.sign-out-div').show();
+  $('.presets-container').html('');
   app.user = data.user;
   console.log(data);
 };
@@ -38,7 +46,7 @@ const signOutSuccess = (data) => {
   $('.change-pass-div').hide();
   $('.sign-out-div').hide();
 
-  $('.presets-container').html('');
+  $('.presets-container').html('*You can save your presets by signing up!');
   delete app.user;
   console.log(data);
 };
