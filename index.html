@@ -11,7 +11,7 @@
 
 
       <header>
-        <p class="banner">Atmosphere</p>
+        <p class="banner">Atmosphere<span class="title">.mix( )</span></p>
         <p class="quote">..to help you Relax, Focus, Meditate, and Sleep.</p>
         <p class="quote">made by <span class="name">Cliff Delsoin</span></p>
         <!-- <div class="user-ajax">
@@ -43,16 +43,16 @@
             <legend></legend>
           </div>
 
-          <div class="change-pass-div">
+          <div class="sign-out-div">
             <h3>
-              <span data-toggle="modal" data-target="#change-pass-modal">Change Password</span>
+              <span class="sign-out-button" data-toggle="modal" data-target="#sign-out-modal">Sign Out</span>
             </h3>
             <legend></legend>
           </div>
 
-          <div class="sign-out-div">
+          <div class="change-pass-div">
             <h3>
-              <span class="sign-out-button" data-toggle="modal" data-target="#sign-out-modal">Sign Out</span>
+              <span data-toggle="modal" data-target="#change-pass-modal">Change Password</span>
             </h3>
             <legend></legend>
           </div>
@@ -259,6 +259,37 @@
                 <input class="sign-in-button" type="submit"  name="submit" value="Submit"> <!-- data-dismiss="modal" -->
                 <!-- <button type="button" class="sign-up-button sign-up-form" onclick='' data-dismiss="modal">Submit</button> -->
               </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- END SIGN IN MODAL -->
+
+      <!-- SIGN IN MODAL -->
+      <div class="modal fade" id="change-pass-modal" tabindex="-1" role="dialog" aria-labelledby="change-pass-modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="change-pass-modalLabel">Change your Password!</h4>
+          </div>
+          <div class="modal-body">
+
+            <!-- <form class="change-pass-form">
+              <input class="fields" type="text" name="credentials[email]" placeholder="username"><br>
+              <input class="fields" type="password" name="credentials[password]" placeholder="password"><br>
+            </form> -->
+
+            <form class="change-password-form">
+              <input type="password" name="passwords[old]" placeholder="old password">
+              <input type="password" name="passwords[new]" placeholder="new password">
+              <div class="modal-footer">
+                <input class="change-pass-button" type="submit"  name="submit" value="Submit"> <!-- data-dismiss="modal" -->
+                <!-- <button type="button" class="sign-up-button sign-up-form" onclick='' data-dismiss="modal">Submit</button> -->
+              </div>
+              <!-- <input class="change-password-button" type="submit"  name="submit" value="Change password!"> -->
             </form>
 
           </div>

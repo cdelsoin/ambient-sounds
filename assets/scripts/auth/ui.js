@@ -51,6 +51,12 @@ const signOutSuccess = (data) => {
   console.log(data);
 };
 
+const changePassSuccess = (data) => {
+  $('#change-pass-modal').modal('hide');
+  // app.user = data.user;
+  console.log(data);
+};
+
 const getPresetsSuccess = (data) => {
   const showPresets = require('../templates/presets.handlebars');
   $('.presets-container').html(showPresets({
@@ -96,5 +102,6 @@ module.exports = {
   signOutSuccess,
   getPresetsSuccess,
   loadPresetSuccess,
-  updatePresetSuccess
+  updatePresetSuccess,
+  changePassSuccess,
 };
