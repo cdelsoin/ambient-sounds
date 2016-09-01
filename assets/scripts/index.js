@@ -39,6 +39,8 @@ const campfirePreset = function(){
 $(() => {
   authEvents.addHandlers();
   $('.pause-img').hide();
+  $('.change-pass-div').hide();
+  $('.sign-out-div').hide();
   $('.save-div').hide();
   $('.get-div').hide();
   campfirePreset();

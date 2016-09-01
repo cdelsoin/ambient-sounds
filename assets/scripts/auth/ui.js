@@ -16,6 +16,8 @@ const signInSuccess = (data) => {
   $('.sign-in-div').hide();
   $('.save-div').show();
   $('.get-div').show();
+  $('.change-pass-div').show();
+  $('.sign-out-div').show();
   app.user = data.user;
   console.log(data);
 };
@@ -27,6 +29,12 @@ const signUpSuccess = (data) => {
 };
 
 const signOutSuccess = (data) => {
+  $('.sign-up-div').show();
+  $('.sign-in-div').show();
+  $('.save-div').hide();
+  $('.get-div').hide();
+  $('.change-pass-div').hide();
+  $('.sign-out-div').hide();
   delete app.user;
   console.log(data);
 };
