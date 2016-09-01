@@ -11,6 +11,17 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
+  $('#sign-in-modal').modal('hide');
+  $('.sign-up-div').hide();
+  $('.sign-in-div').hide();
+  $('.save-div').show();
+  $('.get-div').show();
+  app.user = data.user;
+  console.log(data);
+};
+
+const signUpSuccess = (data) => {
+  $('#sign-up-modal').modal('hide');
   app.user = data.user;
   console.log(data);
 };
@@ -61,6 +72,7 @@ module.exports = {
   failure,
   success,
   signInSuccess,
+  signUpSuccess,
   signOutSuccess,
   getPresetsSuccess,
   loadPresetSuccess,

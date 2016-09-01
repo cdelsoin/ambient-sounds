@@ -14,13 +14,11 @@ $(document).on('click','.load', function(){
 });
 
 $(document).on('click','.update', function(){
-  // debugger;
   let id = this.id;
   authEvents.onUpdatePreset(id);
 });
 
 $(document).on('click','.delete', function(){
-  // debugger;
   let data = this.id;
   authEvents.onDeletePreset(data);
 });
@@ -41,6 +39,8 @@ const campfirePreset = function(){
 $(() => {
   authEvents.addHandlers();
   $('.pause-img').hide();
+  $('.save-div').hide();
+  $('.get-div').hide();
   campfirePreset();
 
 });
