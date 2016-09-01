@@ -12,7 +12,8 @@
 
       <header>
         <p class="banner">Good Ambient Sound Mixer Name</p>
-        <p class="quote">Some catch-line that sounds good too!</p>
+        <p class="quote">..to help you Relax, Concentrate, Meditate, and Sleep.</p>
+        <p class="quote">made by <span class="name">Cliff Delsoin</span></p>
         <!-- <div class="user-ajax">
           <h3 class="navbar sign-up-nav">Sign Up</h3>
           <h3 class="navbar sign-in-nav">Sign In</h3>
@@ -27,7 +28,19 @@
           <img src="assets/images/pause-button-w.png" id="pause" class="pause-img" alt="" />
         </div>
         <div class="preset-ajax">
-          <h3>Log In or Sign Up</h3>
+
+          <h3>
+            <!-- <span class="sign-in-span both-spans" data-toggle="modal" data-target="#sign-in-modal">Sign In</span> -->
+            <span class="sign-up-span both-spans" data-toggle="modal" data-target="#sign-up-modal">Sign Up</span>
+          </h3>
+
+          <legend></legend>
+
+          <h3>
+            <span class="sign-in-span both-spans" data-toggle="modal" data-target="#sign-in-modal">Sign In</span>
+            <!-- <span class="sign-up-span both-spans" data-toggle="modal" data-target="#sign-up-modal">Sign Up</span> -->
+          </h3>
+
           <legend></legend>
           <h3 class="save">Save Your Preset!</h3>
           <form class="save-form">
@@ -99,7 +112,7 @@
 <!-- AUDIO TRACKS AND SLIDERS  -->
       <div class="audio-div">
         <!-- <legend>Audio Tracks </legend> -->
-        <form class="track-one">
+        <form class="all-tracks track-one">
           <img src="assets/images/rain-w.png" alt="" />
           <p>Rain</p>
           <audio id="rain-track" class="audio-track" loop="loop" controls>
@@ -109,7 +122,7 @@
           <input class="rainSlider allSliders" data-track="rain" type="range" min="0" max="1" step="0.025" value="0.0">
         </form>
 
-        <form class="track-two">
+        <form class="all-tracks track-two">
           <img src="assets/images/fire-w.png" alt="" />
           <p>Fireplace</p>
           <audio id="fire-track" class="audio-track" loop="loop" controls>
@@ -119,7 +132,7 @@
           <input class="fireSlider allSliders" data-track="fire" type="range" min="0" max="1" step="0.025" value="0.775">
         </form>
 
-        <form class="track-three">
+        <form class="all-tracks track-three">
           <img src="assets/images/thunder-w.png" alt="" />
           <p>Thunderstorm</p>
           <audio id="thunder-track" class="audio-track" loop="loop" controls>
@@ -129,7 +142,7 @@
           <input class="thunderSlider allSliders" data-track="thunder" type="range" min="0" max="1" step="0.025" value="0.0">
         </form>
 
-        <form class="track-four">
+        <form class="all-tracks track-four">
           <img src="assets/images/crickets-w.png" alt="" />
           <p>Nature at Night/Crickets</p>
           <audio id="crickets-track" class="audio-track" loop="loop" controls>
@@ -139,7 +152,7 @@
           <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.675">
         </form>
 
-        <form class="track-five">
+        <form class="all-tracks track-five">
           <img src="assets/images/birds-w.png" alt="" />
           <p>Birds</p>
           <audio id="birds-track" class="audio-track" loop="loop" controls>
@@ -149,7 +162,7 @@
           <input class="birdsSlider allSliders" data-track="birds" type="range" min="0" max="1" step="0.025" value="0.5">
         </form>
 
-        <form class="track-six">
+        <form class="all-tracks track-six">
           <img src="assets/images/coffee-w.png" alt="" />
           <p>Coffee Shop</p>
           <audio id="coffee-track" class="audio-track" loop="loop" controls>
@@ -159,7 +172,7 @@
           <input class="coffeeSlider allSliders" data-track="coffee" type="range" min="0" max="1" step="0.025" value="0.0">
         </form>
 
-        <form class="track-seven">
+        <form class="all-tracks track-seven">
           <img src="assets/images/waves-w.png" alt="" />
           <p>Waves</p>
           <audio id="waves-track" class="audio-track" loop="loop" controls>
@@ -169,7 +182,7 @@
           <input class="wavesSlider allSliders" data-track="waves" type="range" min="0" max="1" step="0.025" value="0.0">
         </form>
 
-        <form class="track-eight">
+        <form class="all-tracks track-eight">
           <img src="assets/images/bowl-w.png" alt="" />
           <p>Tibetan Singing Bowl</p>
           <audio id="bowl-track" class="audio-track" loop="loop" controls>
@@ -180,6 +193,57 @@
         </form>
       </div>
 <!-- END AUDIO TRACKS AND SLIDERS  -->
+
+<!-- SIGN UP MODAL -->
+      <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up-modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="sign-up-modalLabel">Sign Up!</h4>
+          </div>
+          <div class="modal-body">
+
+            <form class="sign-up-form">
+              <input class="fields" type="text" name="credentials[email]" placeholder="username"><br>
+              <input class="fields" type="password" name="credentials[password]" placeholder="password"><br>
+              <input class="fields" type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+              <div class="modal-footer">
+                <input class="sign-up-button" type="submit"  name="submit" value="Submit"> <!-- data-dismiss="modal" -->
+                <!-- <button type="button" class="sign-up-button sign-up-form" onclick='' data-dismiss="modal">Submit</button> -->
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- END SIGN UP MODAL -->
+
+      <!-- SIGN IN MODAL -->
+      <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="sign-in-modalLabel">Sign In!</h4>
+          </div>
+          <div class="modal-body">
+
+            <form class="sign-in-form">
+              <input class="fields" type="text" name="credentials[email]" placeholder="username"><br>
+              <input class="fields" type="password" name="credentials[password]" placeholder="password"><br>
+              <div class="modal-footer">
+                <input class="sign-in-button" type="submit"  name="submit" value="Submit"> <!-- data-dismiss="modal" -->
+                <!-- <button type="button" class="sign-up-button sign-up-form" onclick='' data-dismiss="modal">Submit</button> -->
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- END SIGN IN MODAL -->
 
     </body>
 </html>

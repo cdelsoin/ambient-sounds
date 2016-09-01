@@ -11,13 +11,6 @@ const ui = require('./ui');
 //
 // });
 
-const onSignUp = function (event) {
-  event.preventDefault();
-  let data = getFormFields(this);
-  api.signUp(data)
-    .done(ui.success)
-    .fail(ui.failure);
-};
 
 const onSignIn = function (event) {
   event.preventDefault();
@@ -25,6 +18,15 @@ const onSignIn = function (event) {
   api.signIn(data)
     .done(ui.signInSuccess)
     .fail(ui.failure);
+};
+
+const onSignUp = function (event) {
+  event.preventDefault();
+  let data = getFormFields(this);
+  api.signUp(data)
+  // .then(onSignIn)
+  .done(ui.success)
+  .fail(ui.failure);
 };
 
 const onChangePassword = function onChangePassword(event) {
