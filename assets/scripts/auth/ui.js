@@ -12,12 +12,14 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide');
+
   $('.sign-up-div').hide();
   $('.sign-in-div').hide();
   $('.save-div').show();
   $('.get-div').show();
   $('.change-pass-div').show();
   $('.sign-out-div').show();
+  $('.presets-container').html('');
   app.user = data.user;
   console.log(data);
 };
@@ -35,6 +37,8 @@ const signOutSuccess = (data) => {
   $('.get-div').hide();
   $('.change-pass-div').hide();
   $('.sign-out-div').hide();
+
+  $('.presets-container').html('');
   delete app.user;
   console.log(data);
 };
