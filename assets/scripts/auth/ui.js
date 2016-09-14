@@ -12,6 +12,8 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide');
+  $('#sign-up-modal').modal('hide');
+
 
   $('.sign-up-div').hide();
   $('.sign-in-div').hide();
@@ -22,6 +24,7 @@ const signInSuccess = (data) => {
   $('.presets-container').html('');
   app.user = data.user;
   console.log(data);
+  $('.get').click();
 };
 
 const signUpSuccess = (data) => {
@@ -53,7 +56,6 @@ const signOutSuccess = (data) => {
 
 const changePassSuccess = (data) => {
   $('#change-pass-modal').modal('hide');
-  // app.user = data.user;
   console.log(data);
 };
 
@@ -92,6 +94,17 @@ const updatePresetSuccess = (data) => {
   $('.presets-container').html(showPresets({
     presets: data.presets
   }));
+  $('.get').click();
+};
+
+const savePresetSuccess = (data) => {
+  $('.get').click();
+  console.log(data);
+};
+
+const deletePresetSuccess = (data) => {
+  $('.get').click();
+  console.log(data);
 };
 
 module.exports = {
@@ -104,4 +117,6 @@ module.exports = {
   loadPresetSuccess,
   updatePresetSuccess,
   changePassSuccess,
+  savePresetSuccess,
+  deletePresetSuccess,
 };

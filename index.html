@@ -13,13 +13,7 @@
       <header>
         <p class="banner">Atmosphere<span class="title">.mix( )</span></p>
         <p class="quote">..to help you Relax, Focus, Meditate, and Sleep.</p>
-        <p class="quote">made by <span class="name">Cliff Delsoin</span></p>
-        <!-- <div class="user-ajax">
-          <h3 class="navbar sign-up-nav">Sign Up</h3>
-          <h3 class="navbar sign-in-nav">Sign In</h3>
-          <h3 class="navbar change-pass-nav">Change Password</h3>
-          <h3 class="navbar sign-out-nav">Sign Out</h3>
-        </div> -->
+        <p class="quote">made by <a target="_blank" href="http://cliffdelsoin.com/"><span class="name shake">Cliff Delsoin</span></a></p>
       </header>
 
       <div class="sidebar">
@@ -27,31 +21,31 @@
           <img src="assets/images/play-button-w.png" id="play" class="play-img" alt="" />
           <img src="assets/images/pause-button-w.png" id="pause" class="pause-img" alt="" />
         </div>
-        <div class="preset-ajax">
 
+        <div class="preset-ajax">
           <div class="sign-up-div">
-             <h3>
+             <h3 class="ajax-buttons">
               <span data-toggle="modal" data-target="#sign-up-modal">Sign Up</span>
             </h3>
             <legend></legend>
           </div>
 
           <div class="sign-in-div">
-            <h3>
+            <h3 class="ajax-buttons">
               <span data-toggle="modal" data-target="#sign-in-modal">Sign In</span>
             </h3>
             <legend></legend>
           </div>
 
           <div class="sign-out-div">
-            <h3>
+            <h3 class="ajax-buttons">
               <span class="sign-out-button" data-toggle="modal" data-target="#sign-out-modal">Sign Out</span>
             </h3>
             <legend></legend>
           </div>
 
           <div class="change-pass-div">
-            <h3>
+            <h3 class="ajax-buttons">
               <span data-toggle="modal" data-target="#change-pass-modal">Change Password</span>
             </h3>
             <legend></legend>
@@ -67,69 +61,16 @@
           </div>
 
           <div class="get-div">
-            <h3 class="get">View Your Presets</h3>
-            <legend></legend>
+            <h3 class="get">Your Presets</h3>
+            <br>
+            <!-- <legend></legend> -->
           </div>
 
-
           <div class="presets-container">*You can save your presets by signing up!</div>
+
         </div>
       </div>
 
-      <!-- <h1>Ambient Sounds</h1>
-      <h3 id="pause">Pause</h3>
-      <h3 id="play">Play</h3> -->
-
-<!-- USER LOGIN STUFF -->
-
-
-      <!-- <form class="sign-up-form">
-        <legend>Sign Up</legend>
-        <input type="text" name="credentials[email]" placeholder="username">
-        <input type="password" name="credentials[password]" placeholder="password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-        <input class="sign-up-button" type="submit" name="submit" value="Sign Up!">
-      </form>
-
-      <form class="sign-in-form">
-        <legend>Sign In</legend>
-        <input type="text" name="credentials[email]" placeholder="username">
-        <input type="password" name="credentials[password]" placeholder="password">
-        <input class="sign-in-button" type="submit" name="submit" value="Sign In!">
-      </form>
-
-      <form class="change-password-form">
-        <legend>Change Password</legend>
-        <input type="password" name="passwords[old]" placeholder="old password">
-        <input type="password" name="passwords[new]" placeholder="new password">
-        <input class="change-password-button" type="submit"  name="submit" value="Change password!">
-      </form>
-
-      <form class="sign-out-form">
-        <legend>Sign Out</legend>
-        <input class="sign-out-button" type="submit" name="submit" value="Sign Out!">
-      </form> -->
-<!-- END USER LOGIN STUFF -->
-
-<!-- PRESETS AJAX -->
-
-
-      <!-- <legend>Preset Ajax</legend>
-      <form>
-        <h3 class="save">Save</h3>
-        <input class="save-input" type="text" placeholder="name your preset">
-        <input class="save" type="submit" value="Save Preset">
-      </form>
-
-      <h3 class="get">Get Presets (Displays)</h3>
-      <div class="presets-container"></div>
-
-      <form>
-        <h3 class="delete-header">Delete Preset by ID</h3>
-        <input class="delete-input" type="text" placeholder="enter preset ID to delete">
-        <input class="delete" type="submit" value="Delete Preset">
-      </form> -->
-<!-- END PRESETS AJAX -->
 
 <!-- AUDIO TRACKS AND SLIDERS  -->
       <div class="audio-div">
@@ -231,8 +172,7 @@
               <input class="fields" type="password" name="credentials[password]" placeholder="password"><br>
               <input class="fields" type="password" name="credentials[password_confirmation]" placeholder="confirm password">
               <div class="modal-footer">
-                <input class="sign-up-button" type="submit"  name="submit" value="Submit"> <!-- data-dismiss="modal" -->
-                <!-- <button type="button" class="sign-up-button sign-up-form" onclick='' data-dismiss="modal">Submit</button> -->
+                <input class="sign-up-button" type="submit"  name="submit" value="Submit">
               </div>
             </form>
 
@@ -256,8 +196,7 @@
               <input class="fields" type="text" name="credentials[email]" placeholder="username"><br>
               <input class="fields" type="password" name="credentials[password]" placeholder="password"><br>
               <div class="modal-footer">
-                <input class="sign-in-button" type="submit"  name="submit" value="Submit"> <!-- data-dismiss="modal" -->
-                <!-- <button type="button" class="sign-up-button sign-up-form" onclick='' data-dismiss="modal">Submit</button> -->
+                <input class="sign-in-button" type="submit"  name="submit" value="Submit">
               </div>
             </form>
 
@@ -267,7 +206,7 @@
       </div>
       <!-- END SIGN IN MODAL -->
 
-      <!-- SIGN IN MODAL -->
+      <!-- CHANGE PASSWORD MODAL -->
       <div class="modal fade" id="change-pass-modal" tabindex="-1" role="dialog" aria-labelledby="change-pass-modalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -277,26 +216,21 @@
           </div>
           <div class="modal-body">
 
-            <!-- <form class="change-pass-form">
-              <input class="fields" type="text" name="credentials[email]" placeholder="username"><br>
-              <input class="fields" type="password" name="credentials[password]" placeholder="password"><br>
-            </form> -->
-
             <form class="change-password-form">
               <input type="password" name="passwords[old]" placeholder="old password">
               <input type="password" name="passwords[new]" placeholder="new password">
               <div class="modal-footer">
-                <input class="change-pass-button" type="submit"  name="submit" value="Submit"> <!-- data-dismiss="modal" -->
-                <!-- <button type="button" class="sign-up-button sign-up-form" onclick='' data-dismiss="modal">Submit</button> -->
+                <input class="change-pass-button" type="submit"  name="submit" value="Submit">
               </div>
-              <!-- <input class="change-password-button" type="submit"  name="submit" value="Change password!"> -->
             </form>
 
           </div>
         </div>
       </div>
       </div>
-      <!-- END SIGN IN MODAL -->
+      <!-- END CHANGE PASSWORD MODAL -->
+
+      <footer></footer>
 
     </body>
 </html>

@@ -1,16 +1,8 @@
 'use strict';
 
 const getFormFields = require(`../../../lib/get-form-fields`);
-// const app = require('../app');
 const api = require('./api');
 const ui = require('./ui');
-
-
-// $(() => {
-// // on ready block
-//
-// });
-
 
 const onSignIn = function () {
   event.preventDefault();
@@ -24,12 +16,12 @@ const onSignUp = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
   api.signUp(data)
+  .done(ui.signUpSuccess)
   .then(
     api.signIn(data)
     .done(ui.signInSuccess)
     .fail(ui.failure)
   )
-  .done(ui.signUpSuccess)
   .fail(ui.failure);
 };
 
@@ -56,7 +48,7 @@ const onGetPresets = function onGetPresets(event) {
     .fail(ui.failure);
 };
 
-const onSavePreset = function onSavePreset(getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) {
+const onSavePreset = function onSavePreset(event, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) {
   getRain = $(".rainSlider").prop('value');
   getFire = $(".fireSlider").prop('value');
   getThunder = $(".thunderSlider").prop('value');
@@ -65,11 +57,10 @@ const onSavePreset = function onSavePreset(getRain, getFire, getThunder, getCric
   getCoffee = $(".coffeeSlider").prop('value');
   getWaves  = $(".wavesSlider").prop('value');
   getBowl = $(".bowlSlider").prop('value');
-  // let getName = getFormFields(this);
   let getName = $('.save-input').prop('value');
   event.preventDefault();
   api.savePreset(getName, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl)
-    .done(ui.success)
+    .done(ui.savePresetSuccess)
     .fail(ui.failure);
 };
 
@@ -82,15 +73,16 @@ const onLoadPreset = function onLoadPreset(data) {
 };
 
 const onDeletePreset = function onDeletePreset(data) {
-  // let data = $('.delete-input').prop('value');
   console.log(data);
   event.preventDefault();
   api.deletePreset(data)
-    .done(ui.success)
+    .done(ui.deletePresetSuccess)
     .fail(ui.failure);
 };
 
 const onUpdatePreset = function onChangePresetName(id, getRain, getFire, getThunder, getCrickets, getBirds, getCoffee, getWaves, getBowl) {
+  event.preventDefault();
+
   getRain = $(".rainSlider").prop('value');
   getFire = $(".fireSlider").prop('value');
   getThunder = $(".thunderSlider").prop('value');
@@ -105,15 +97,12 @@ const onUpdatePreset = function onChangePresetName(id, getRain, getFire, getThun
 };
 
 const addHandlers = () => {
-  // $('.load').on('submit', onLoadPreset);
-
   $('.delete').on('click', onDeletePreset);
   $('.get').on('click', onGetPresets);
   $('.save').on('click', onSavePreset);
   $('.sign-up-form').on('submit', onSignUp);
   $('.sign-in-form').on('submit', onSignIn);
   $('.change-password-form').on('submit', onChangePassword);
-  // $('.sign-out-form').on('click', onSignOut);
   $('.sign-out-div').on('click', onSignOut);
 };
 
