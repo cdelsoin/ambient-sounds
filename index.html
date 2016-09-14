@@ -16,146 +16,152 @@
         <p class="quote">made by <a target="_blank" href="http://cliffdelsoin.com/"><span class="name shake">Cliff Delsoin</span></a></p>
       </header>
 
-      <div class="sidebar">
-        <div class="play-button">
-          <img src="assets/images/play-button-w.png" id="play" class="play-img" alt="" />
-          <img src="assets/images/pause-button-w.png" id="pause" class="pause-img" alt="" />
+
+      <div class="audio-sidebar-container">
+
+        <div class="sidebar">
+          <div class="play-button">
+            <img src="assets/images/play-button-w.png" id="play" class="play-img" alt="" />
+            <img src="assets/images/pause-button-w.png" id="pause" class="pause-img" alt="" />
+          </div>
+
+          <div class="preset-ajax">
+            <div class="sign-up-div">
+              <h3 class="ajax-buttons">
+                <span data-toggle="modal" data-target="#sign-up-modal">Sign Up</span>
+              </h3>
+              <legend></legend>
+            </div>
+
+            <div class="sign-in-div">
+              <h3 class="ajax-buttons">
+                <span data-toggle="modal" data-target="#sign-in-modal">Sign In</span>
+              </h3>
+              <legend></legend>
+            </div>
+
+            <div class="sign-out-div">
+              <h3 class="ajax-buttons">
+                <span class="sign-out-button" data-toggle="modal" data-target="#sign-out-modal">Sign Out</span>
+              </h3>
+              <legend></legend>
+            </div>
+
+            <div class="change-pass-div">
+              <h3 class="ajax-buttons">
+                <span data-toggle="modal" data-target="#change-pass-modal">Change Password</span>
+              </h3>
+              <legend></legend>
+            </div>
+
+            <div class="save-div">
+              <h3 class="save">Save Your Preset!</h3>
+              <form class="save-form">
+                <input class="save-input" type="text" placeholder="name your preset">
+                <input class="save" type="submit" value="Save">
+              </form>
+              <legend></legend>
+            </div>
+
+            <div class="get-div">
+              <h3 class="get">Your Presets</h3>
+              <br>
+              <!-- <legend></legend> -->
+            </div>
+
+            <div class="presets-container">*You can save your presets by signing up!</div>
+
+          </div>
         </div>
 
-        <div class="preset-ajax">
-          <div class="sign-up-div">
-             <h3 class="ajax-buttons">
-              <span data-toggle="modal" data-target="#sign-up-modal">Sign Up</span>
-            </h3>
-            <legend></legend>
-          </div>
 
-          <div class="sign-in-div">
-            <h3 class="ajax-buttons">
-              <span data-toggle="modal" data-target="#sign-in-modal">Sign In</span>
-            </h3>
-            <legend></legend>
-          </div>
+        <!-- AUDIO TRACKS AND SLIDERS  -->
+        <div class="audio-div">
+          <!-- <legend>Audio Tracks </legend> -->
+          <form class="all-tracks track-one">
+            <img src="assets/images/rain-w.png" alt="" />
+            <p>Rain</p>
+            <audio id="rain-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/rain.ogg" type="audio/ogg">
+              <source src="assets/audio/rain.mp3" type="audio/mp3">
+            </audio>
+            <input class="rainSlider allSliders" data-track="rain" type="range" min="0" max="1" step="0.025" value="0.0">
+          </form>
 
-          <div class="sign-out-div">
-            <h3 class="ajax-buttons">
-              <span class="sign-out-button" data-toggle="modal" data-target="#sign-out-modal">Sign Out</span>
-            </h3>
-            <legend></legend>
-          </div>
+          <form class="all-tracks track-two">
+            <img src="assets/images/fire-w.png" alt="" />
+            <p>Fireplace</p>
+            <audio id="fire-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/fireplace.ogg" type="audio/ogg">
+              <source src="assets/audio/fireplace.mp3" type="audio/mp3">
+            </audio>
+            <input class="fireSlider allSliders" data-track="fire" type="range" min="0" max="1" step="0.025" value="0.775">
+          </form>
 
-          <div class="change-pass-div">
-            <h3 class="ajax-buttons">
-              <span data-toggle="modal" data-target="#change-pass-modal">Change Password</span>
-            </h3>
-            <legend></legend>
-          </div>
+          <form class="all-tracks track-three">
+            <img src="assets/images/thunder-w.png" alt="" />
+            <p>Thunderstorm</p>
+            <audio id="thunder-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/thunder.ogg" type="audio/ogg">
+              <source src="assets/audio/thunder.mp3" type="audio/mp3">
+            </audio>
+            <input class="thunderSlider allSliders" data-track="thunder" type="range" min="0" max="1" step="0.025" value="0.0">
+          </form>
 
-          <div class="save-div">
-            <h3 class="save">Save Your Preset!</h3>
-            <form class="save-form">
-              <input class="save-input" type="text" placeholder="name your preset">
-              <input class="save" type="submit" value="Save">
-            </form>
-            <legend></legend>
-          </div>
+          <form class="all-tracks track-four">
+            <img src="assets/images/crickets-w.png" alt="" />
+            <p>Nature at Night/Crickets</p>
+            <audio id="crickets-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/crickets.ogg" type="audio/ogg">
+              <source src="assets/audio/crickets.mp3" type="audio/mp3">
+            </audio>
+            <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.675">
+          </form>
 
-          <div class="get-div">
-            <h3 class="get">Your Presets</h3>
-            <br>
-            <!-- <legend></legend> -->
-          </div>
+          <form class="all-tracks track-five">
+            <img src="assets/images/birds-w.png" alt="" />
+            <p>Birds</p>
+            <audio id="birds-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/birds.ogg" type="audio/ogg">
+              <source src="assets/audio/birds.mp3" type="audio/mp3">
+            </audio>
+            <input class="birdsSlider allSliders" data-track="birds" type="range" min="0" max="1" step="0.025" value="0.5">
+          </form>
 
-          <div class="presets-container">*You can save your presets by signing up!</div>
+          <form class="all-tracks track-six">
+            <img src="assets/images/coffee-w.png" alt="" />
+            <p>Coffee Shop</p>
+            <audio id="coffee-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/coffee.ogg" type="audio/ogg">
+              <source src="assets/audio/coffee.mp3" type="audio/mp3">
+            </audio>
+            <input class="coffeeSlider allSliders" data-track="coffee" type="range" min="0" max="1" step="0.025" value="0.0">
+          </form>
+
+          <form class="all-tracks track-seven">
+            <img src="assets/images/waves-w.png" alt="" />
+            <p>Waves</p>
+            <audio id="waves-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/waves.ogg" type="audio/ogg">
+              <source src="assets/audio/waves.mp3" type="audio/mp3">
+            </audio>
+            <input class="wavesSlider allSliders" data-track="waves" type="range" min="0" max="1" step="0.025" value="0.0">
+          </form>
+
+          <form class="all-tracks track-eight">
+            <img src="assets/images/bowl-w.png" alt="" />
+            <p>Tibetan Singing Bowl</p>
+            <audio id="bowl-track" class="audio-track" loop="loop" controls>
+              <source src="assets/audio/bowl.ogg" type="audio/ogg">
+              <source src="assets/audio/bowl.mp3" type="audio/mp3">
+            </audio>
+            <input class="bowlSlider allSliders" data-track="bowl" type="range" min="0" max="1" step="0.025" value="0.0">
+          </form>
 
         </div>
+                <!-- END AUDIO TRACKS AND SLIDERS  -->
+
       </div>
-
-
-<!-- AUDIO TRACKS AND SLIDERS  -->
-      <div class="audio-div">
-        <!-- <legend>Audio Tracks </legend> -->
-        <form class="all-tracks track-one">
-          <img src="assets/images/rain-w.png" alt="" />
-          <p>Rain</p>
-          <audio id="rain-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/rain.ogg" type="audio/ogg">
-            <source src="assets/audio/rain.mp3" type="audio/mp3">
-          </audio>
-          <input class="rainSlider allSliders" data-track="rain" type="range" min="0" max="1" step="0.025" value="0.0">
-        </form>
-
-        <form class="all-tracks track-two">
-          <img src="assets/images/fire-w.png" alt="" />
-          <p>Fireplace</p>
-          <audio id="fire-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/fireplace.ogg" type="audio/ogg">
-            <source src="assets/audio/fireplace.mp3" type="audio/mp3">
-          </audio>
-          <input class="fireSlider allSliders" data-track="fire" type="range" min="0" max="1" step="0.025" value="0.775">
-        </form>
-
-        <form class="all-tracks track-three">
-          <img src="assets/images/thunder-w.png" alt="" />
-          <p>Thunderstorm</p>
-          <audio id="thunder-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/thunder.ogg" type="audio/ogg">
-            <source src="assets/audio/thunder.mp3" type="audio/mp3">
-          </audio>
-          <input class="thunderSlider allSliders" data-track="thunder" type="range" min="0" max="1" step="0.025" value="0.0">
-        </form>
-
-        <form class="all-tracks track-four">
-          <img src="assets/images/crickets-w.png" alt="" />
-          <p>Nature at Night/Crickets</p>
-          <audio id="crickets-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/crickets.ogg" type="audio/ogg">
-            <source src="assets/audio/crickets.mp3" type="audio/mp3">
-          </audio>
-          <input class="cricketsSlider allSliders" data-track="crickets" type="range" min="0" max="1" step="0.025" value="0.675">
-        </form>
-
-        <form class="all-tracks track-five">
-          <img src="assets/images/birds-w.png" alt="" />
-          <p>Birds</p>
-          <audio id="birds-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/birds.ogg" type="audio/ogg">
-            <source src="assets/audio/birds.mp3" type="audio/mp3">
-          </audio>
-          <input class="birdsSlider allSliders" data-track="birds" type="range" min="0" max="1" step="0.025" value="0.5">
-        </form>
-
-        <form class="all-tracks track-six">
-          <img src="assets/images/coffee-w.png" alt="" />
-          <p>Coffee Shop</p>
-          <audio id="coffee-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/coffee.ogg" type="audio/ogg">
-            <source src="assets/audio/coffee.mp3" type="audio/mp3">
-          </audio>
-          <input class="coffeeSlider allSliders" data-track="coffee" type="range" min="0" max="1" step="0.025" value="0.0">
-        </form>
-
-        <form class="all-tracks track-seven">
-          <img src="assets/images/waves-w.png" alt="" />
-          <p>Waves</p>
-          <audio id="waves-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/waves.ogg" type="audio/ogg">
-            <source src="assets/audio/waves.mp3" type="audio/mp3">
-          </audio>
-          <input class="wavesSlider allSliders" data-track="waves" type="range" min="0" max="1" step="0.025" value="0.0">
-        </form>
-
-        <form class="all-tracks track-eight">
-          <img src="assets/images/bowl-w.png" alt="" />
-          <p>Tibetan Singing Bowl</p>
-          <audio id="bowl-track" class="audio-track" loop="loop" controls>
-            <source src="assets/audio/bowl.ogg" type="audio/ogg">
-            <source src="assets/audio/bowl.mp3" type="audio/mp3">
-          </audio>
-          <input class="bowlSlider allSliders" data-track="bowl" type="range" min="0" max="1" step="0.025" value="0.0">
-        </form>
-      </div>
-<!-- END AUDIO TRACKS AND SLIDERS  -->
 
 <!-- SIGN UP MODAL -->
       <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up-modalLabel" aria-hidden="true">

@@ -47,10 +47,16 @@ header {
 
 .audio-div {
   background-color: $pure-black;
+  border-right: 2px solid $pure-white;
   float: left;
   min-height: 75vh;
-  opacity: .4;
   width: 75%;
+}
+
+.audio-sidebar-container {
+  background-color: $pure-black;
+  opacity: .4;
+  overflow: hidden;
 }
 
 .banner {
@@ -79,7 +85,6 @@ header {
 .name {
   color: $teal;
   cursor: pointer;
-  // font-family: Georgia;
   text-shadow: 0 0 10px purple;
   transition: .7s ease-out;
 }
@@ -87,20 +92,15 @@ header {
 .play-button {
   background-color: $teal;
   border-bottom: 2px solid $pure-white;
-  border-left: 2px solid $pure-white;
-  opacity: .4;
   padding: 20px 0;
   text-align: center;
 }
 
 .preset-ajax {
   background-color: $pure-black;
-  border-left: 2px solid $pure-white;
-  // min-height: 79.4vh;
   height: 100%;
   max-height: 57.8vh;
   min-height: 57.8vh;
-  opacity: .4;
   overflow: auto;
 }
 
@@ -125,10 +125,8 @@ header {
 }
 
 .sidebar {
-  // display: inline-block;
   float: right;
   min-height: 78.5vh;
-  // max-height: 78.5vh;
   text-align: center;
   width: 25%;
 }
@@ -142,20 +140,3 @@ header {
   margin: 0 auto;
   overflow: hidden;
 }
-
-
-
-// %default-transition {
-//   @include transition(all .5s ease-in-out);
-// }
-//
-// span {
-//   @extend %default-transition;
-//   position: relative, auto 0px auto auto;
-// }
-//
-// &:hover {
-//   span {
-//     position: relative, auto -10px auto auto;
-//   }
-// }
