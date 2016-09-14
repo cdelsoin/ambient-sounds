@@ -11,12 +11,51 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
+  $('#sign-in-modal').modal('hide');
+  $('#sign-up-modal').modal('hide');
+
+
+  $('.sign-up-div').hide();
+  $('.sign-in-div').hide();
+  $('.save-div').show();
+  $('.get-div').show();
+  $('.change-pass-div').show();
+  $('.sign-out-div').show();
+  $('.presets-container').html('');
+  app.user = data.user;
+  console.log(data);
+  $('.get').click();
+};
+
+const signUpSuccess = (data) => {
+  $('#sign-up-modal').modal('hide');
+
+  $('.sign-up-div').hide();
+  $('.sign-in-div').hide();
+  $('.save-div').show();
+  $('.get-div').show();
+  $('.change-pass-div').show();
+  $('.sign-out-div').show();
+  $('.presets-container').html('');
   app.user = data.user;
   console.log(data);
 };
 
 const signOutSuccess = (data) => {
+  $('.sign-up-div').show();
+  $('.sign-in-div').show();
+  $('.save-div').hide();
+  $('.get-div').hide();
+  $('.change-pass-div').hide();
+  $('.sign-out-div').hide();
+
+  $('.presets-container').html('*You can save your presets by signing up!');
   delete app.user;
+  console.log(data);
+};
+
+const changePassSuccess = (data) => {
+  $('#change-pass-modal').modal('hide');
   console.log(data);
 };
 
@@ -55,14 +94,29 @@ const updatePresetSuccess = (data) => {
   $('.presets-container').html(showPresets({
     presets: data.presets
   }));
+  $('.get').click();
+};
+
+const savePresetSuccess = (data) => {
+  $('.get').click();
+  console.log(data);
+};
+
+const deletePresetSuccess = (data) => {
+  $('.get').click();
+  console.log(data);
 };
 
 module.exports = {
   failure,
   success,
   signInSuccess,
+  signUpSuccess,
   signOutSuccess,
   getPresetsSuccess,
   loadPresetSuccess,
-  updatePresetSuccess
+  updatePresetSuccess,
+  changePassSuccess,
+  savePresetSuccess,
+  deletePresetSuccess,
 };

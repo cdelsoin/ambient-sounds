@@ -1,9 +1,5 @@
 'use strict';
 
-// user require with a reference to bundle the file and use it in this file
-// var example = require('./example');
-
-// use require without a reference to ensure a file is bundled
 require('./example');
 require('./audio');
 require('./auth/events');
@@ -14,13 +10,11 @@ $(document).on('click','.load', function(){
 });
 
 $(document).on('click','.update', function(){
-  // debugger;
   let id = this.id;
   authEvents.onUpdatePreset(id);
 });
 
 $(document).on('click','.delete', function(){
-  // debugger;
   let data = this.id;
   authEvents.onDeletePreset(data);
 });
@@ -40,5 +34,11 @@ const campfirePreset = function(){
 // On document ready
 $(() => {
   authEvents.addHandlers();
+  $('.pause-img').hide();
+  $('.change-pass-div').hide();
+  $('.sign-out-div').hide();
+  $('.save-div').hide();
+  $('.get-div').hide();
   campfirePreset();
+
 });

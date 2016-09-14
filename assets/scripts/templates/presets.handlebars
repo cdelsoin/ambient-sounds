@@ -1,8 +1,11 @@
 {{#each presets}}
 
-<h4> id:{{id}} {{name}} </h4>
-<button id={{id}} class="load"> Load </button>
-<button id={{id}} class="update"> Save </button>
-<button id={{id}} class="delete"> Delete </button>
+<h4 class="presets-name">  {{name}} </h4>
+<form class="presets-buttons">
+  <button id={{id}} class="load"> Load </button>
+  <button id={{id}} class="update"> Save </button>
+  <button id={{id}} class="delete"> Delete </button>
+</form>
+<br>
 
 {{/each}}

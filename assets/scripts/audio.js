@@ -1,6 +1,9 @@
 'use strict';
 
 const pauseAll = function pauseAll(){
+  $('.pause-img').hide();
+  $('.play-img').show();
+
   $('#rain-track').get(0).pause();
   $('#fire-track').get(0).pause();
   $('#thunder-track').get(0).pause();
@@ -12,6 +15,9 @@ const pauseAll = function pauseAll(){
 };
 
 const playAll = function playAll(){
+  $('.play-img').hide();
+  $('.pause-img').show();
+
   $('#rain-track').get(0).play();
   $('#fire-track').get(0).play();
   $('#thunder-track').get(0).play();
@@ -21,33 +27,6 @@ const playAll = function playAll(){
   $('#waves-track').get(0).play();
   $('#bowl-track').get(0).play();
 };
-
-//THIS ADJUSTS ONLY ONE SLIDER -- CODE NOT DRY
-// const changeVol = function changeVol() {
-//   const sliderInput = function sliderInput() {
-//     console.log(this);
-//     console.log($('.rainSlider').val());
-//     return $('.rainSlider').val();
-//   };
-//   $('#rain-track').prop('volume', sliderInput);
-// };
-
-// THIS ADJUSTS ALL VOLUMES TO SAME VALUE
-// const changeVol2 = function changeVol2(){
-//   // this would work if i can select "this" audio-track
-//   $('.audio-track').prop('volume', $(this).val());
-//
-// };
-
-
-// string interpralation to select specific slider
-// const changeRainVol = function changeRainVol(){
-//   let foo = foo;
-//   const sliderInput = function sliderInput(){
-//     return $('.' + foo +'rainSlider').val();
-//   };
-//   $('#rain-track').prop('volume', sliderInput);
-// };
 
 const changeRainVol = function changeRainVol(){
   const sliderInput = function sliderInput(){
@@ -105,11 +84,6 @@ const changeBowlVol = function changeBowlVol(){
   $('#bowl-track').prop('volume', sliderInput);
 };
 
-
-
-
-// $('.rainSlider').on('change', changeVol);
-// $('.allSliders').on('change', changeVol2);
 $('.rainSlider').on('input change', changeRainVol);
 $('.fireSlider').on('input change', changeFireVol);
 $('.thunderSlider').on('input change', changeThunderVol);
@@ -120,4 +94,3 @@ $('.wavesSlider').on('input change', changeWavesVol);
 $('.bowlSlider').on('input change', changeBowlVol);
 $('#pause').on('click', pauseAll);
 $('#play').on('click', playAll);
-$('.audio-track').prop('volume', 0.5);
