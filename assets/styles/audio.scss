@@ -181,4 +181,8 @@ header {
     text-decoration: underline;
   }
 
+  input[type=range] {
+    width: 125px;
+  }
+
 }
