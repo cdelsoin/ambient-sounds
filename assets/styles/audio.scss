@@ -7,14 +7,13 @@ body {
   background-image: url('https://imgur.com/7McNfTt.gif');
   background-size: 100% 100%;
   color: $pure-white;
-  font-size: 16px;
   font-weight: bold;
-  // background-image: url('https://helpx.adobe.com/photoshop/how-to/make-animated-gif/_jcr_content/main-pars/learn_multi_column_361608956/multi-column-2/image.img.gif/Step-1.gif');
-  // min-height: 100vh;
-  // background-image: url('../images/waves-gif.gif');
-  // background-image: url('http://i.imgur.com/gmuhE5e.gif');
-  // background-image: url('http://i.imgur.com/mJBEies.gif');
-  // background-image: url('http://i.imgur.com/cHDC1Nu.gif');
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container-fluid {
+  padding: 0px !important;
 }
 
 audio {
@@ -85,8 +84,11 @@ header {
 .name {
   color: $teal;
   cursor: pointer;
-  text-shadow: 0 0 10px purple;
   transition: .7s ease-out;
+}
+
+.name:hover {
+  text-decoration: underline;
 }
 
 .play-button {
@@ -139,4 +141,44 @@ header {
   border: 2px solid $teal;
   margin: 0 auto;
   overflow: hidden;
+}
+
+#welcome-modal {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  body {
+    background: none;
+    background-color: #013e3e;
+  }
+
+  .banner {
+    font-size: 40px;
+  }
+
+  .quote {
+    font-size: 20px;
+  }
+
+  .sidebar {
+    width: 50%;
+  }
+
+  .audio-div {
+    width: 50%;
+  }
+
+  .get-div {
+    overflow: visible;
+  }
+
+  .preset-ajax {
+    overflow: visible;
+  }
+
+  .name {
+    text-decoration: underline;
+  }
+
 }

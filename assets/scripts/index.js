@@ -40,5 +40,6 @@ $(() => {
   $('.save-div').hide();
   $('.get-div').hide();
   campfirePreset();
+  $('#welcome-modal').modal('show');
 
 });
