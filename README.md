@@ -22,11 +22,6 @@ https://ambient-sounds-api.herokuapp.com/
 - As a user I can update the name of my preset
 - As a user I can delete the preset
 
-## Issues
-
-- We initially were unsure of whether or not we could edit a modal enough to make it look like it wasn't a bootstrap modal at all
-- Incorporating a third party API was something we wanted to do but deciding which one took a lot of research.
-
 ## Wireframe
 
 http://tinypic.com/r/2iavoy0/9
